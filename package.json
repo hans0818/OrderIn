@@ -1,0 +1,20 @@
+{
+  "name": "orderin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd pos-app && npm install && cd ../kiosk-app && npm install",
+    "start": "cd pos-app && npm run start-pos",
+    "start-all": "concurrently \"cd pos-app && npm run start-pos\" \"cd kiosk-app && npm start\"",
+    "start-pos": "cd pos-app && npm run start-pos",
+    "start-kiosk": "cd kiosk-app && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3"
+  }
+}

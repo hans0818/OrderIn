@@ -5,8 +5,8 @@
   "scripts": {
     "install-all": "npm install && cd pos-app && npm install && cd ../kiosk-app && npm install",
     "start": "cd pos-app && npm run start-pos",
-    "start-all": "concurrently \"cd pos-app && npm run start-pos\" \"cd kiosk-app && npm start\"",
-    "start-pos": "cd pos-app && npm run start-pos",
+    "start-all": "concurrently \"npm run start-pos\" \"npm run start-kiosk\"",
+    "start-pos": "cd pos-app && npm start",
     "start-kiosk": "cd kiosk-app && npm start"
   },
   "keywords": [],

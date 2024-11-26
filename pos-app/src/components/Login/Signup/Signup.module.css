@@ -1,0 +1,340 @@
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+}
+
+.signupBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signupBox h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.inputsContainer {
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.smallInput {
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.smallInput:hover {
+  background-color: #e9ecef;
+}
+
+.smallInput label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.smallInput div {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.success {
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.ssnInput {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.ssnInput input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  text-align: center;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+.ssnInput input:first-child {
+  width: 90px;
+  border-radius: 4px 0 0 4px;
+}
+
+.ssnDash {
+  color: #666;
+  font-size: 1.2rem;
+  padding: 0 0.25rem;
+  background: none;
+  border: none;
+}
+
+.ssnLastGroup {
+  display: flex;
+  align-items: stretch;
+}
+
+.ssnLastGroup input {
+  width: 1em !important;
+  min-width: unset !important;
+  padding: 0.75rem 0 !important;
+  border-radius: 0;
+  text-align: center;
+}
+
+.ssnMaskText {
+  background-color: #f8f9fa;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  color: #666;
+  font-size: 1rem;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+}
+
+.ssnInput input:focus {
+  outline: none;
+  border-color: #007bff;
+  position: relative;
+  z-index: 1;
+}
+
+.smallInput.clickable {
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.smallInput.clickable:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.smallInput.clickable:active {
+  transform: translateY(0);
+}
+
+/* 클릭 가능함을 나타내는 아이콘 추가 */
+.smallInput.clickable::after {
+  content: '✎';
+  position: absolute;
+  right: 1rem;
+  color: #6c757d;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.smallInput.clickable:hover::after {
+  opacity: 1;
+}
+
+/* 기존 스타일은 유지하고 아래 스타일 추가 */
+
+.verificationContainer {
+  margin-bottom: 2rem;
+}
+
+.verificationContainer h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.verificationOptions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.verificationOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.verificationOption:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.verificationIcon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.verificationText {
+  text-align: left;
+}
+
+.verificationText h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.verificationText p {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 기존 스타일에 추가 */
+.passwordValue {
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.passwordValue:hover {
+  background-color: #e9ecef;
+}
+
+.smallInput.clickable:hover .passwordValue {
+  background-color: #e9ecef;
+}
+
+/* 기존 스타일에 추가 */
+.editingField {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+.doneButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.doneButton:hover {
+  background-color: #0056b3;
+}
+
+/* 기존 스타일에 추가 */
+.editInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.completedField {
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.completedField:hover {
+  background-color: #e9ecef;
+}
+
+.labelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.editIcon {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.value {
+  font-size: 1rem;
+  color: #212529;
+}
+
+.editInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

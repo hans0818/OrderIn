@@ -1,0 +1,22 @@
+.categoryMenuContainer {
+    display: grid;
+    grid-auto-flow: column; /* 항목들을 수평으로 배치 */
+    grid-auto-columns: max-content; /* 항목들의 너비를 자동으로 설정 */
+    gap: 20px;
+    overflow-x: auto;
+    height:100%;
+    overflow-x: auto; /* 가로 스크롤을 활성화 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    align-items: center;
+    -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
+    -ms-overflow-style: none; /* IE와 Edge에서 스크롤바 숨김 */
+  scrollbar-width: none; /* Firefox에서 스크롤바 숨김 */
+  }
+  
+  .categoryItem {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+    width: auto; /* 항목의 고정 너비 설정 */
+  }

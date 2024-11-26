@@ -1,0 +1,153 @@
+/* LeftSection.module.css */
+
+.leftSection {
+  flex: 3.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+  height: 100%;
+}
+
+.menuButtonContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.addMenuButton {
+  padding: 10px;
+  background-color: rgba(79, 117, 255, 0.2);
+  color: #4F75FF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 70%;
+  height: 4vh;
+}
+
+.editMenuButton {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #858585;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 30%;
+  height: 4vh;
+}
+
+.addMenuButton:hover {
+  background-color: rgba(79, 117, 255, 0.6);
+}
+
+.editMenuButton:hover {
+  background-color: rgba(79, 117, 255, 0.1);
+}
+
+.menuListButton {
+  width: 100%;
+  height: 5.5vh;
+  padding: 10px 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.menuListButton:hover {
+  background-color: #f5f5f5;
+}
+
+.menuListButton.selected {
+  background-color: #4F75FF;
+  border-color: #4F75FF;
+}
+
+.menuName {
+  font-weight: bold;
+  color: #333;
+}
+
+.menuPrice {
+  color: #666;
+}
+
+.menuListButton.selected .menuName,
+.menuListButton.selected .menuPrice {
+  color: white;
+}
+
+.menuListContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 10px;
+  height: calc(100% - 50px);
+}
+
+.menuListContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menuListContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.menuListContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.menuListContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.menuActionButtons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.addButton,
+.editButton {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 4vh;
+}
+
+.addButton {
+  background-color: rgba(79, 117, 255, 0.2);
+  color: #4F75FF;
+  border: none;
+  width: 100%;
+}
+
+.editButton {
+  background-color: white;
+  color: #858585;;
+  border: 1px solid #ccc;
+  width: 40%;
+}
+
+.addButton:hover {
+  background-color: rgba(79, 117, 255, 0.6);
+}
+
+.editButton:hover {
+  background-color: rgba(79, 117, 255, 0.1);
+}

@@ -1,0 +1,36 @@
+.tableControlContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  
+  .addButton {
+    background-color: rgba(79, 117, 255, 0.2);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 4px;
+    flex-grow: 8;
+    color: #4F75FF;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .addButton:hover {
+    background-color: rgba(79, 117, 255, 0.6);
+  }
+  
+  .deleteButton {
+    background-color: rgba(231, 72, 0, 0.2);
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    flex-grow: 2;
+  }
+  
+  .deleteButton:hover {
+    background-color: rgba(231, 72, 0, 0.6);
+  }
+  

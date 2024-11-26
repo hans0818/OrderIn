@@ -1,0 +1,81 @@
+.button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 기본 버튼 스타일 */
+.default {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.default:hover {
+  background-color: #e0e0e0;
+}
+
+/* 세부주문 버튼 스타일 */
+.detail {
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #ff4500;
+  border: 1px solid #ff4500;
+  font-size: 11px;
+  min-height: 24px;
+  min-width: 60px;
+}
+
+.detail:hover {
+  background-color: #fff5f2;
+}
+
+/* active 상태일 때도 흰색 배경 유지 */
+.detail.active {
+  background-color: #fff;
+  color: #ff4500;
+  border-color: #ff4500;
+}
+
+.detail.active:hover {
+  background-color: #fff5f2;
+}
+
+/* 옵션 선택 버튼 스타일 */
+.option {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+  margin: 4px;
+  min-width: 80px;
+}
+
+.option:hover {
+  border-color: #ff4500;
+  color: #ff4500;
+}
+
+/* 활성화 상태 */
+.active {
+  background-color: #ff4500;
+  color: #fff;
+  border-color: #ff4500;
+}
+
+.active:hover {
+  background-color: #e63e00;
+}
+
+/* 비활성화 상태 */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} 

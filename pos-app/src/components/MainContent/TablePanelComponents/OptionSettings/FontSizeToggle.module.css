@@ -1,0 +1,60 @@
+.fontSizeToggleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .fontSizeToggleTrack {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #e7e6e6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    box-sizing: border-box;
+  }
+  
+  .toggleSquareFontSize {
+    position: absolute;
+    width: calc(33.33%);
+    height: 36px;
+    background-color: #ffffff;
+    top: 2px;
+    transform: translateX(0);
+    border-radius: 5px;
+    pointer-events: none;
+    transition: left 0.3s ease;
+  }
+  
+  /* 공통 폰트 버튼 스타일 */
+  .fontSizeToggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    color: #787878;
+    font-weight: bold;
+  }
+  
+  .fontSizeToggleButton:hover {
+    background: none;
+  }
+  
+  /* 각 버튼의 폰트 크기 설정 */
+  .fontSizeToggleSmall {
+    font-size: 14px;
+  }
+  
+  .fontSizeToggleMedium {
+    font-size: 18px;
+  }
+  
+  .fontSizeToggleLarge {
+    font-size: 22px;
+  }
+  

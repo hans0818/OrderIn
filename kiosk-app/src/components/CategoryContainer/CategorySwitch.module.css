@@ -1,0 +1,53 @@
+.categorySwitchContainer {
+  display: grid;
+  justify-content: end; /* 그리드 내에서 오른쪽 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  width: 100%;
+  box-sizing: border-box; /* 패딩 포함하여 박스 크기 계산 */
+  height:100%;
+}
+
+.categorySwitch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative; /* 컨테이너 내에서 상대적인 위치 */
+}
+
+.categorySwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.categorySlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.categorySlider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .categorySlider {
+  background-color: #ff9b00;
+}
+
+input:checked + .categorySlider:before {
+  transform: translateX(26px);
+}

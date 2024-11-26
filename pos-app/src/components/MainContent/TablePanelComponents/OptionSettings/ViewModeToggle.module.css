@@ -1,0 +1,43 @@
+.viewModeToggleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .viewModeToggleTrack {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #e7e6e6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .toggleSquareViewMode {
+    position: absolute;
+    width: 50%; /* 사각형 너비: 두 개의 버튼을 덮음 */
+    height: 36px;
+    background-color: #ffffff;
+    top: 2px;
+    left: 0; /* 처음에 첫 번째 버튼 위에 위치 */
+    border-radius: 5px;
+    pointer-events: none;
+    transition: left 0.3s ease; /* 사각형 이동 애니메이션 */
+  }
+  
+  .viewModeToggleTrack button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1; /* 버튼이 사각형 위에 표시되도록 */
+    flex: 1; /* 버튼들이 트랙에서 균등하게 분포 */
+    text-align: center;
+    color: #787878;
+    font-weight: bold;
+  }
+  

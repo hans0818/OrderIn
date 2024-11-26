@@ -1,0 +1,20 @@
+/* 유의 사항 전체 컨테이너에 여백을 추가 */
+.disclaimerContainer {
+  padding: 2px 20px 500px 20px; /* margin-bottom 대신 padding-bottom 사용 */
+  background-color: #F3F3F3; /* menuContainer와 동일한 배경색 */
+}
+
+/* 유의 사항 제목 스타일링 */
+.disclaimerTitle {
+  font-size: 1em;
+  font-weight: 400;
+  color: #333;
+}
+
+/* 유의 사항 항목 스타일링 */
+.disclaimerItem {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #3d3d3d;
+  margin-bottom: 0px; /* 문장 간의 간격을 줄임 */
+}

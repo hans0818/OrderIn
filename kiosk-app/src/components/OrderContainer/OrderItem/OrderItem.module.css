@@ -1,0 +1,173 @@
+.orderItem {
+  display: grid;
+  grid-template-columns: 45% 1fr 30%;
+  grid-template-areas: 
+    "name quantity price"
+    "detail detail detail"
+    "options options options";
+  align-items: center;
+  padding: 10px 0;
+  gap: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.itemName {
+  grid-area: name;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: 600; /* 더 두껍게 */
+  margin-left: 14px;
+}
+
+.quantityControl {
+  grid-area: quantity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+}
+
+.controlButton {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600; /* 더 두껍게 */
+  margin: 0 2px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 14px;
+  font-weight: 600; /* 더 두껍게 */
+  text-align: center;
+  min-width: 20px;
+}
+
+.price {
+  grid-area: price;
+  font-size: 16px;
+  font-weight: 700; /* 가격은 더 두껍게 */
+  text-align: right;
+  margin-right: 14px;
+}
+
+.optionsContainer {
+  grid-area: options;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.optionsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 2px 4px;
+  margin-bottom: 6px;
+}
+
+.closeButtonRow {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
+
+.closeButtonContainer {
+  width: 33%; /* 3분의 1 크기로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionsRow > div {
+  width: 100%;
+}
+
+.optionsRow button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sizeOption,
+.tasteOption,
+.toppingsOption {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600; /* 옵션 텍스트도 약간 두껍게 */
+  background-color: white;
+  width: 100%;
+}
+
+.sizeOption:focus,
+.tasteOption:focus,
+.toppingsOption:focus {
+  outline: none;
+}
+
+.disabledOption {
+  background-color: rgb(255, 179, 179);
+}
+
+.toppingsContainer {
+  width: 100%;
+}
+
+.toppingsToggle {
+  width: 100%;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.toppingOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toppingOption:hover {
+  background-color: #f0f0f0;
+}
+
+.checkmark {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.toppingOption input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.detailButtonContainer {
+  grid-area: detail;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}

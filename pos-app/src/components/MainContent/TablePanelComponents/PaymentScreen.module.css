@@ -1,0 +1,33 @@
+.paymentScreenOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FAF8FF;
+  z-index: 1000;
+}
+
+.paymentScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentButton {
+  padding: 30px 60px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #4F75FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.paymentButton:hover {
+  background-color: #3d5ccc;
+} 

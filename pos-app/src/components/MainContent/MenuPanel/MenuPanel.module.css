@@ -1,0 +1,130 @@
+.menuPanel {
+  width: calc(100% - 40px); /* 좌우 패딩을 위해 40px만큼 너비를 줄입니다. */
+  height: 100%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+
+.menuSectionButtonContainer {
+  display: flex;
+  align-items: flex-start;
+  width: calc(100% - 40px);
+
+  height: 5vh; /* 고정 높이 설정 */
+  padding: 10px 20px;
+}
+
+.toggleButtonContainer {
+  display: flex;
+  gap: 8px;
+  width: 25%;
+  justify-content: flex-end;
+  height: 100%;
+  margin-left: auto;
+}
+
+.toggleButton {
+  flex: 1;
+  padding: 10px 0;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #4F75FF;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggleButton:hover {
+  background-color: rgba(79, 117, 255, 0.6);
+}
+
+.active {
+  background-color: #4F75FF;
+  color: #fff;
+  box-shadow: none; /* 활성화 시 그림자 제거 */
+}
+
+
+
+.categoryContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 73%;
+  height: 100%; /* toggleButtonContainer와 동일한 높이 */
+}
+
+.categoryBox {
+  padding: 0px 16px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #333;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryBox.selected {
+  background-color: #4F75FF;
+  color: white;
+  border-color: #4F75FF;
+}
+
+.categoryBox:hover {
+  background-color: rgba(79, 117, 255, 0.1);
+}
+
+.categoryBox.selected:hover {
+  background-color: #4F75FF;
+}
+
+.categoryPlaceholder {
+  height: 100%;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstPlaceholder {
+  border: 1px dashed #4F75FF;
+  color: #4F75FF;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.emptyPlaceholder {
+  background-color: #f5f5f5;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 20px;
+}
+
+.menuSection {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: 3.5fr 1px 6fr;
+  gap: 10px;
+  height: 100%;
+}
+
+.verticalDivider {
+  width: 1px;
+  background-color: #e0e0e0;
+}

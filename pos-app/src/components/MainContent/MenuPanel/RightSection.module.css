@@ -1,0 +1,291 @@
+/* RightSection.module.css */
+
+.rightSection {
+  flex: 6;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.rightSection::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rightSection::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.rightSection::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.rightSection::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.menuActionContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* 왼쪽 편집 버튼 그룹 */
+.editButtonGroup {
+  display: flex;
+  gap: 8px;
+  width: 50%;
+}
+
+/* 오른쪽 액션 버튼 그룹 */
+.actionButtonGroup {
+  display: flex;
+  gap: 8px;
+  margin-left: 8px;
+  width: 50%;
+}
+
+.deleteButton {
+  background-color: white;
+  color: #E84800;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 4vh;
+  transition: all 0.3s ease;
+  width: 40%;
+}
+
+.saveButton {
+  background-color: rgba(79, 117, 255, 0.2);
+  color: #4F75FF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 4vh;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.editCategoryButton,
+.editMenuButton {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 4vh;
+  transition: all 0.3s ease;
+  color: #858585;
+  width: 30%;
+}
+
+.editCategoryButton:hover,
+.editMenuButton:hover {
+  background-color: rgba(79, 117, 255, 0.1);
+}
+
+.deleteButton:hover {
+  background-color: #E84800;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: rgba(79, 117, 255, 0.6);
+}
+
+.menuDetailsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputLabel {
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.requiredMark {
+  color: red;
+  margin-left: 4px;
+}
+
+.menuNameInput,
+.priceInput,
+.basicOrderQuantityInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  height: 4vh;
+}
+
+
+.menuNameInput {
+  width: 60%;
+}
+
+.priceInput {
+  width: 40%;
+  padding-right: 30px;
+}
+
+.basicOrderQuantityInput {
+  width: 52%;
+}l
+
+.priceInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currencyOverlay {
+  position: absolute;
+  right: 60%;
+  transform: translateX(30px);
+  color: #666;
+  pointer-events: none;
+  user-select: none;
+  line-height: 3.5;
+}
+
+.optionSelectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionButtonContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.optionButton {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: #858585;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  height: 8vh;
+  Width: 10vw;
+}
+
+.optionButtonActive {
+  background-color: #4F75FF;
+  color: white;
+  border-color: #4F75FF;
+}
+
+.optionButton:hover {
+  background-color: rgba(79, 117, 255, 0.6);
+  color: #fff;
+}
+
+.imageUploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.imageUploadWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.imagePreviewWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.imagePreview {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.descriptionInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 60px;
+  width: 60%;
+}
+
+.basicOrderQuantityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quantityHint {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.imageUploadButton {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  width: 120px;
+  text-align: center;
+}
+
+.imageUploadButton.uploaded {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
+
+.imageRemoveButton {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.imageRemoveButton:hover {
+  background-color: #cc0000;
+}

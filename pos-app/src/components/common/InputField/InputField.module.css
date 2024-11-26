@@ -1,0 +1,84 @@
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.success {
+  color: #007bff;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* SSN 입력 필드 스타일 */
+.ssnInputGroup {
+  position: relative;
+  width: fit-content;
+}
+
+.ssnInput {
+  width: 150px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  text-align: center;
+  font-family: monospace;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.ssnInput::placeholder {
+  color: #999;
+}
+
+.ssnDisplay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  color: #212529;
+  font-family: monospace;
+  background: white;
+}
+
+.ssnInput:focus::placeholder {
+  color: transparent;
+}

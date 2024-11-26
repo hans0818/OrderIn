@@ -1,0 +1,157 @@
+.orderTopContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 6px 2px;
+  position: relative;
+  height : 5vh;
+}
+
+.setToggleSwitch {
+  justify-self: start;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.setSlider {
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 13px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.setSlider.active {
+  background-color: #FF4500;
+}
+
+.setHandle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.setSlider.active .setHandle {
+  transform: translateX(24px);
+}
+
+.heightAdjustButton {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: none; 
+}
+
+.orderCompleteButton {
+  justify-self: end;
+  padding: 8px 16px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  margin-right: 10px;
+}
+
+.orderCompleteButton:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.topButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.squareButton {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rectangleButton {
+  width: 310px;
+  height: 150px;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.squareButton:hover, .rectangleButton:hover {
+  transform: scale(0.98);
+  transition: transform 0.2s ease;
+}
+
+.squareButton:active, .rectangleButton:active {
+  transform: scale(0.95);
+}
+
+.topContainer {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  cursor: grab;
+  touch-action: none;
+}
+
+.topContainer.dragging {
+  cursor: grabbing;
+}
+
+.dragHandle {
+  width: 40px;
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 2px;
+}

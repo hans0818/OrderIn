@@ -1,0 +1,82 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  position: relative; /* 추가 */
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 60px; /* 완료 버튼을 위한 공간 확보 */
+}
+
+.optionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent; /* iOS에서 탭 시 파란색 하이라이트 제거 */
+  -webkit-touch-callout: none; /* iOS에서 길게 누를 때 메뉴 표시 방지 */
+  user-select: none; /* 텍스트 선택 방지 */
+  color: inherit; /* 기본 텍스트 색상 유지 */
+}
+
+.optionButton.selected {
+  background-color: #f0f0f0;
+}
+
+.optionButton.disabled {
+  background-color: #ffeeee; /* 연한 빨간색 */
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.closeButton {
+  position: absolute;
+  bottom: 20px; /* 하단에서 20px */
+  right: 20px; /* 오른쪽에서 20px */
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.closeButton:hover {
+  background-color: #e0e0e0;
+}
+
+.checkmark {
+  color: #FF4500;
+  font-weight: bold;
+}

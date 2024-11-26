@@ -1,0 +1,16 @@
+.nav {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+  margin-left: 0;
+}
+
+.menuContainer {
+  overflow-y: auto;
+  height: calc(100vh - 6vh);
+  background-color: #f5f5f5;
+  margin-bottom: 40vh;
+  padding-bottom: 20px;
+}
+

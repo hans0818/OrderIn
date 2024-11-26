@@ -1,0 +1,15 @@
+.sortOrderButton {
+  padding: 10px 20px;
+  background-color: rgba(79, 117, 255, 0.2);
+  color: #4F75FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.sortOrderButton:hover {
+    background-color: rgba(79, 117, 255, 0.6);
+} 

@@ -1,0 +1,61 @@
+{
+  "name": "pos-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "buffer": "^6.0.3",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.9.0",
+    "react": "^18.3.1",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-datepicker": "^7.4.0",
+    "react-dom": "^18.3.1",
+    "react-firebase-hooks": "^5.1.1",
+    "react-rnd": "^10.4.13",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
+    "timers-browserify": "^2.0.12",
+    "web-vitals": "^2.1.4",
+    "xml2js": "^0.6.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "start-pos": "cross-env HOST=0.0.0.0 PORT=3000 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "buffer": "^6.0.3",
+    "stream-browserify": "^3.0.0",
+    "timers-browserify": "^2.0.12"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "react-app-rewired": "^2.2.1"
+  }
+}

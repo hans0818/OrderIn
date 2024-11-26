@@ -1,0 +1,38 @@
+.colorButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+  
+  .colorButton {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .checkMark {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .colorButton1 {
+    background-color: #4f75ff;
+  }
+  
+  .colorButton2 {
+    background-color: #e74800;
+  }
+  
+  .colorButton3 {
+    background-color: #00a06a;
+  }
+  
+  .colorButton4 {
+    background-color: #ffa500;
+  }
+  

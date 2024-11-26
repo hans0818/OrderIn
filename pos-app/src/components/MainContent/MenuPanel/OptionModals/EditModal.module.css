@@ -1,0 +1,253 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90vw;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menuModalContent {
+  width: 800px;
+}
+
+.modalContent h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.categoryEditContainer {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.categoryEditRow {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.categoryEditRow::after {
+  content: none;
+}
+
+.categoryEditRow.selected {
+  border-bottom: 2px solid #4F75FF;
+  background-color: rgba(79, 117, 255, 0.05);
+}
+
+.categoryEditRow:hover::after {
+  content: none;
+}
+
+.categoryIndex {
+  width: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.categoryEditInput {
+  flex: 1;
+  height: 5vh;
+  padding: 0 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.priceInputContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.priceInputContainer input {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.currencyOverlay {
+  position: absolute;
+  right: 12px;
+  color: #666;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.categoryOrderButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrowButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.moveUpButton,
+.moveDownButton {
+  padding: 2px 4px;
+  background-color: #4F75FF;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+}
+
+.moveUpButton:disabled,
+.moveDownButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.categoryEditRemoveButton {
+  padding: 4px 8px;
+  background-color: white;
+  color: #E84800;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.categoryEditRemoveButton:hover {
+  background-color: #E84800;
+  color: white;
+}
+
+.modalFooter {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.categoryEditCancelButton {
+  padding: 8px 24px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryEditCompleteButton {
+  padding: 8px 24px;
+  background-color: #4F75FF;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryEditCancelButton:hover {
+  background-color: #f5f5f5;
+}
+
+.categoryEditCompleteButton:hover {
+  background-color: #3B5FCC;
+}
+
+.addHint {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  text-align: left;
+  margin-left: 40px;  /* categoryIndex width + some padding */
+}
+
+.addText {
+  color: #4F75FF;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 40px;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.addText:hover {
+  text-decoration: underline;
+}
+
+.shortcutText {
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.headerLabels {
+  display: flex;
+  padding: 0 0 8px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.indexLabel {
+  width: 40px;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.nameLabel {
+  flex: 1;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.priceLabel {
+  width: 400px;
+  color: #666;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,161 @@
+/* src/components/MainContent/MainContent.module.css */
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #FAF8FF;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 투명한 검은색 */
+  z-index: 5; /* 오버레이가 테이블 패널을 덮음 */
+  pointer-events: none; /* 오버레이가 이벤트를 가로채지 않도록 설정 */
+}
+
+.sectionPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: none;
+  overflow-x: auto;
+  border-bottom: 5px solid white;
+  z-index: 10;
+  position: relative;
+}
+
+/* Light Mode Styles */
+.lightMode {
+  border-bottom: 5px solid white;
+  background-color: #FAF8FF; /* 라이트 모드 배경색 */
+  color: #404040; /* 라이트 모드 텍스트 색상 */
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  border-bottom: 5px solid #444444; /* 원하는 어두운 색상으로 변경 */
+  background-color: #333333; /* 섹션 패널 배경을 어둡게 설정 */
+  color: #ffffff; /* 다크 모드 텍스트 색상 */
+}
+
+.sectionBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 6px;
+  border-radius: 16px 16px 0 0;
+  width: 16%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  height: 40px;
+
+}
+
+.sectionBox p, .sectionBox input {
+  margin: 0; /* 텍스트와 인풋 박스의 기본 margin을 제거 */
+  flex-grow: 1; /* 텍스트나 input이 가운데 정렬되도록 설정 */
+  text-align: center; /* 텍스트와 input 모두 중앙 정렬 */
+  background-color: transparent; /* input 박스의 배경을 투명하게 */
+  font-size: 1rem; /* 글자 크기를 동일하게 설정 */
+  font-weight: bold; /* 글자 굵기 설정 (필요 시) */
+}
+
+/* Light Mode Text - 기본 상태일 때 회색으로 변경 */
+.sectionPanel.lightMode .sectionBox p,
+.sectionPanel.lightMode .sectionBox input {
+  color: #989898; /* 비활성화 상태일 때 회색 */
+}
+
+/* Light Mode Text - 선택된 상태일 때 진한 색상으로 변경 */
+.sectionPanel.lightMode .sectionBox.selected p,
+.sectionPanel.lightMode .sectionBox.selected input {
+  color: #404040; /* 활성화 상태일 때 진한 색상 */
+}
+
+/* Dark Mode Text */
+.sectionPanel.darkMode .sectionBox p,
+.sectionPanel.darkMode .sectionBox input {
+  color: #ffffff; /* 다크 모드 텍스트 색상 */
+}
+
+.sectionInput {
+  /* 섹션 이름 입력 필드 스타일 */
+  flex: 1;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px; /* 마지막 섹션 박스와의 간격 */
+  height: 100%;
+  z-index: 10;
+}
+
+.addButton, .deleteButton, .deleteSectionButton {
+  background: none;  /* 기본 배경 없앰 */
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.deleteSectionButton {
+  background: none;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* hover 상태에서 배경색 추가 */
+.addButton:hover, .deleteButton:hover, .deleteSectionButton:hover {
+  background-color: transparent;  /* 연한 회색 배경 */
+}
+
+/* deleteSectionButton hover 시에도 기본 배경 없음 */
+.deleteSectionButton:hover {
+  background-color: transparent; /* 배경색 없음 */
+}
+
+/* selected 클래스 스타일 */
+.sectionBox.selected {
+  background-color: white; /* 선택된 경우 흰색 배경 유지 */
+}
+
+/* Dark Mode Selected Section */
+.sectionPanel.darkMode .sectionBox {
+  background-color: #2a2a2a; /* 다크모드에서의 기본 배경색 */
+}
+
+.sectionPanel.darkMode .sectionBox.selected {
+  background-color: #444444; /* 다크모드에서 선택된 경우의 배경색 */
+}
+
+.sectionPanel.lightMode .sectionBox.selected p,
+.sectionPanel.lightMode .sectionBox.selected input {
+  color: #323232; /* 선택된 경우의 텍스트 색상 */
+}

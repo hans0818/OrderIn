@@ -1,0 +1,118 @@
+/* src/components/MenuContainer/MenuSwitch.module.css */
+
+/* 모든 요소에 box-sizing 설정 추가 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --track-width: 95%; /* 트랙의 너비를 95%로 설정 */
+  --track-color: #EBEBEB; /* 기본 트랙 색상 */
+  --track-active-color: #FF4500; /* 체크된 후 트랙 색상 */
+  --handle-width: 65vw; /* 핸들의 너비를 화면 너비의 65%로 설정 */
+  --handle-radius: 10px; /* 핸들의 둥근 정도 */
+  --handle-color: #FFFEF9; /* 핸들의 기본 색상 */
+}
+
+.menuSwitch {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 5px;
+  width: var(--track-width);
+  justify-content: start;
+}
+
+.menuSwitch:first-child {
+  margin-top: 2px;
+}
+
+.menuSwitch:last-child {
+  margin-bottom: 15px;
+}
+
+.menuTrack {
+  position: relative;
+  width: 100%;
+  background-color: var(--track-color);
+  border-radius: 5px;
+  min-height: 70px;
+  max-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.menuHandle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--handle-width);
+  background: var(--handle-color);
+  border-radius: var(--handle-radius);
+  box-shadow: 1px 2px 5.1px rgba(0, 0, 0, 0.25), -2px 1px 7.7px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  will-change: transform;
+  touch-action: pan-y; /* 가로 스크롤 방지, 세로 스크롤 허용 */
+}
+
+.hiddenCheckbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menuName {
+  color: black;
+  font-size: 16px;
+  text-align: right;
+  width: 100%;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuNameText {
+  display: inline;
+  padding: 0 2px;
+}
+
+.menuPrice {
+  color: black;
+  font-size: 16px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* 형광펜 효과를 위한 클래스 수정 */
+.highlighted {
+  background: linear-gradient(180deg, transparent 50%, rgba(255, 255, 0, 0.3) 50%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.menuImage {
+  width: 100%; /* 부모 요소의 너비에 맞게 이미지 크기 조정 */
+  max-width: 300px; /* 이미지의 최대 너비를 300px로 제한 (필요에 따라 조절) */
+  height: auto; /* 높이는 자동으로 조절하여 비율 유지 */
+  margin-top: 10px; /* 위쪽에 여백 추가 */
+  display: block; /* 이미지를 블록 요소로 설정 */
+  margin-left: auto;
+  margin-right: auto; /* 이미지를 가운데 정렬 */
+  object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞춤 */
+}
